@@ -8,12 +8,12 @@ import { environment } from './../environments/environment';
 export class AppServiceService {
 
   readonly ROOT_URL;
-
+/*
   constructor(private http: HttpClient) {
     this.ROOT_URL = 'http://localhost:8080'
 }
-/*For Delete*  
-/*
+*/
+
   constructor(private http: HttpClient) {
     if(environment.production == false){
       this.ROOT_URL = 'test'
@@ -21,7 +21,7 @@ export class AppServiceService {
       this.ROOT_URL = 'api'
     }
   }
-*/
+
 
   initializeDB(){
     return this.http.get(`/${this.ROOT_URL}/dbinitialize`)
